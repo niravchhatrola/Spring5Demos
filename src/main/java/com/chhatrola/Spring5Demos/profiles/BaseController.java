@@ -14,13 +14,13 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class BaseController {
 
-    @Qualifier("i18nGreeting")
+
     @Autowired
-    GreetingService greetingService;
+    ProfileController profileController;
 
     public void test(){
 
-        System.out.println(greetingService.greet());
+        profileController.test();
 
     }
 

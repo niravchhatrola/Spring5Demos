@@ -1,6 +1,7 @@
 package com.chhatrola.Spring5Demos.profiles;
 
 import com.chhatrola.Spring5Demos.basic.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
@@ -11,12 +12,9 @@ import org.springframework.stereotype.Controller;
 public class ProfileController {
 
 
+    @Qualifier("i18nGreeting")
+    @Autowired
     GreetingService greetingService;
-
-
-    ProfileController(@Qualifier("constructorGreetingService") GreetingService greetingService){
-        this.greetingService = greetingService;
-    }
 
     public void test(){
 
