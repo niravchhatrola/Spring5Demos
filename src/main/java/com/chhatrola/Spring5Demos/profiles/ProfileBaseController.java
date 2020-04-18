@@ -12,7 +12,7 @@ import org.springframework.stereotype.Controller;
  * Created by niv214 on 15/4/20.
  */
 @Controller
-public class BaseController {
+public class ProfileBaseController {
 
 
     @Autowired

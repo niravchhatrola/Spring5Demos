@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active:GJ
+
+---
+spring:
+  profile: HN
+greet: Namastey
+
+---
+spring:
+  profile: EN
+greet: Hello
+
+---
+spring:
+  profile: GJ
+greet: Jay Shree Krishna

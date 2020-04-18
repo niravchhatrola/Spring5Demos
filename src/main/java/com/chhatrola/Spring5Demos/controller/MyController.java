@@ -1,7 +1,9 @@
 package com.chhatrola.Spring5Demos.controller;
 
 import com.chhatrola.Spring5Demos.basic.BasicController;
-import com.chhatrola.Spring5Demos.profiles.BaseController;
+import com.chhatrola.Spring5Demos.lifecycle.LifeCycleBaseController;
+import com.chhatrola.Spring5Demos.profiles.ProfileBaseController;
+import com.chhatrola.Spring5Demos.propertiesdemo.BasePropertyController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -15,12 +17,20 @@ public class MyController {
     BasicController basicController;
 
     @Autowired
-    BaseController baseController;
+    ProfileBaseController profileBaseController;
+
+    @Autowired
+    BasePropertyController basePropertyController;
+
+    @Autowired
+    LifeCycleBaseController lifeCycleBaseController;
 
     public String greetings(){
 
         basicController.test();
-        baseController.test();
+        profileBaseController.test();
+        basePropertyController.test();
+        lifeCycleBaseController.test();
 
 
         return "Doneeeeeeeee";
